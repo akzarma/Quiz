@@ -119,7 +119,7 @@ public class AdminLogin extends javax.swing.JFrame {
             
             Class.forName("com.mysql.jdbc.Driver");
             Connection con=DriverManager.getConnection("jdbc:mysql://10.11.13.13:3306/viitquiz?zeroDateTimeBehavior=convertToNull","akz","55920982921");
-            //mysql server
+            //mysql serverrr
             Statement st=con.createStatement();
 
             //ResultSet rs=st.executeQuery("select * from APP.admin");
