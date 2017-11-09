@@ -157,12 +157,12 @@ public class StudentLogin extends javax.swing.JFrame {
             //Connection con=DriverManager.getConnection("jdbc:derby://localhost:1527/sun-appserv-samples","APP","APP");
             
             Class.forName("com.mysql.jdbc.Driver");
-            Connection con=DriverManager.getConnection("jdbc:mysql://10.11.13.13:3306/viitquiz?zeroDateTimeBehavior=convertToNull","akz","55920982921");
+            Connection con=DriverManager.getConnection(Akz.ip, "root", "");
             //mysql server
             final Statement st=con.createStatement();
 
             //ResultSet rs=st.executeQuery("select * from APP.student");
-            ResultSet rs=st.executeQuery("select * from viitquiz.student");//mysql server
+            ResultSet rs=st.executeQuery("select * from student");//mysql server
             ResultSetMetaData meta=rs.getMetaData();
             int found=0;
             while(rs.next()){
@@ -211,7 +211,7 @@ public class StudentLogin extends javax.swing.JFrame {
                  
                  
                  
-                 ResultSet rs_qna=st.executeQuery("select * from viitquiz.qna");
+                 ResultSet rs_qna=st.executeQuery("select * from qna");
                 // ResultSetMetaData meta_qn=rs_qna.getMetaData();
                  total_q=0;
                  while(rs_qna.next()){
@@ -234,7 +234,7 @@ public class StudentLogin extends javax.swing.JFrame {
                      System.out.println("-------------");
                      
                  ///// first question 
-                 ResultSet rs_qna1=st.executeQuery("select * from viitquiz.qna where id = "+ID.get(0)+"");
+                 ResultSet rs_qna1=st.executeQuery("select * from qna where id = "+ID.get(0)+"");
                  rs_qna1.next();
                  //System.out.print(rs_qna.getObject("question"));
                 //// System.out.print("\nyha tak to chl gya2"+rs_qna1.getObject("question").toString());

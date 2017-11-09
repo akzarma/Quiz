@@ -164,7 +164,7 @@ public class RegisterAdmin extends javax.swing.JFrame {
             //Connection con=DriverManager.getConnection("jdbc:derby://localhost:1527/sun-appserv-samples","APP","APP");
             
             Class.forName("com.mysql.jdbc.Driver");
-            Connection con=DriverManager.getConnection("jdbc:mysql://10.11.13.13:3306/viitquiz?zeroDateTimeBehavior=convertToNull","akz","55920982921");
+            Connection con=DriverManager.getConnection(Akz.ip, "root", "");
             //mysql server
             Statement st=con.createStatement();
 

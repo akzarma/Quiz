@@ -460,12 +460,12 @@ public class AddQuestion extends javax.swing.JFrame {
     {
         try{
         Class.forName("com.mysql.jdbc.Driver");
-            Connection con=DriverManager.getConnection("jdbc:mysql://10.11.13.13:3306/viitquiz?zeroDateTimeBehavior=convertToNull","akz","55920982921");
+            Connection con=DriverManager.getConnection(Akz.ip, "root", "");
             //mysql server
             Statement st=con.createStatement();
 
             //ResultSet rs=st.executeQuery("select * from APP.student");
-            ResultSet rs_qna=st.executeQuery("select * from viitquiz.qna");//mysql server
+            ResultSet rs_qna=st.executeQuery("select * from qna");//mysql server
             //ResultSetMetaData meta=rs.getMetaData();
             int total_q=0;
             while(rs_qna.next()){

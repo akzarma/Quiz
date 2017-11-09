@@ -652,14 +652,14 @@ public class StudentPage extends javax.swing.JFrame {
         }
             
             Class.forName("com.mysql.jdbc.Driver");
-            Connection con=DriverManager.getConnection("jdbc:mysql://10.11.13.13/viitquiz?zeroDateTimeBehavior=convertToNull","akz","55920982921");
+            Connection con=DriverManager.getConnection(Akz.ip, "root", "");
            
             //mysql server
             Statement st=con.createStatement();
 
            
             
-            ResultSet rs_qna1=st.executeQuery("select * from viitquiz.qna where id = "+StudentLogin.ID.get(index-1)+"");
+            ResultSet rs_qna1=st.executeQuery("select * from qna where id = "+StudentLogin.ID.get(index-1)+"");
                  rs_qna1.next();
                 //System.outp.print(rs_qna.getObject("question"));
                 // System.out.print("\nyha tak to chl gya2"+rs_qna1.getObject("question").toString());
@@ -774,7 +774,7 @@ public class StudentPage extends javax.swing.JFrame {
 
            
             
-            ResultSet rs_qna1=st.executeQuery("select * from viitquiz.qna where id = "+StudentLogin.ID.get(index-1)+"");
+            ResultSet rs_qna1=st.executeQuery("select * from qna where id = "+StudentLogin.ID.get(index-1)+"");
                  rs_qna1.next();
                 //System.out.print(rs_qna.getObject("question"));
                 // System.out.print("\nyha tak to chl gya2"+rs_qna1.getObject("question").toString());
@@ -899,7 +899,7 @@ public class StudentPage extends javax.swing.JFrame {
             //Connection con=DriverManager.getConnection("jdbc:derby://localhost:1527/sun-appserv-samples","APP","APP");
             
             Class.forName("com.mysql.jdbc.Driver");
-            Connection con=DriverManager.getConnection("jdbc:mysql://10.11.13.13/viitquiz?zeroDateTimeBehavior=convertToNull","akz","55920982921");
+            Connection con=DriverManager.getConnection(Akz.ip, "root", "");
             //mysql server
             Statement st=con.createStatement();
 

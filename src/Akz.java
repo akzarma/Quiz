@@ -9,10 +9,13 @@
  * @author Akshay
  */
 import java.awt.Toolkit;
-    import java.sql.*;
+import java.sql.*;
 
 
 public class Akz extends javax.swing.JFrame {
+    
+     static String ip = "jdbc:mysql://localhost:3307/mysql?zeroDateTimeBehavior=convertToNull";
+     
     /**
      * Creates new form Akz
      */
